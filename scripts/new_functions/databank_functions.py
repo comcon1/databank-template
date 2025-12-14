@@ -3,7 +3,7 @@ import logging
 from typing import Any, Literal
 import os
 
-import DatabankLib as dlb
+import fairmd.lipids as dlb
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +55,7 @@ def get_form_factor_and_total_density_pair(
 
     :return: Form factor and total density of the simulation.
     """
-    system_endpath = os.path.join(dlb.NMLDB_SIMU_PATH, system["path"])
+    system_endpath = os.path.join(dlb.FMDL_SIMU_PATH, system["path"])
     form_factor_path = os.path.join(system_endpath, "FormFactor.json")
     total_density_path = os.path.join(system_endpath, "TotalDensity.json")
 
